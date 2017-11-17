@@ -39,8 +39,10 @@ app.get('/songs', function(request, response){
 app.get('/songs1/:name', function(request, response){
 	var name = request.params.name;
 	client.hget('songs', name, function(error, reply){
-	console.log(reply);
-	response.json(reply);	
+		response.render('show.ejs',
+			{ song: {name: name, songInd: reply}});
+	//console.log(reply);
+	//response.json(reply);	
 	}); 
 		//response.json(songs[request.params.name]);
 });
