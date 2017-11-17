@@ -52,7 +52,7 @@ a:active {
 
 /* Shared */
 
-form, .city-list {
+form, .song-list {
   background: white;
   margin-bottom: 20px;
   padding: 20px;
@@ -107,12 +107,12 @@ input[type="submit"] {
 
 /* Block List */
 
-.city-list li::after {
+.song-list li::after {
   clear: both;
   content: '';
   display: table;
 }
-.city-list li a:last-child {
+.song-list li a:last-child {
   float: left;
   padding-right: 10px;
 }
