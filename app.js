@@ -71,7 +71,7 @@ app.get('/songs/:name', function(request, response){
 	
 });
 
-app.delete('/songs/:name', function(request, response){
+app.delete('/songDel/:name', function(request, response){
 	var name = request.params.name;
 	client.hdel('songs', name, function(error) {
       if(error) throw error;
