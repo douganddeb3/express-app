@@ -4,12 +4,12 @@ $.get('/songs', appendToList);
 function appendToList(songs) {
 var list = [];
 for(var i in songs){
-list.push($('<li><a href="/songDel'+songs[i]+'" data-song='+songs[i]+'>x&nbsp;</a><a href="/songs1/'+songs[i]+'" id="link">' +songs[i]+ '</a></li>' ));  //{ text: cities[i] }
+list.push($('<li><a class="liItem" href="/songs/'+songs[i]+'" data-song='+songs[i]+'>x&nbsp;</a><a href="/songs1/'+songs[i]+'" id="link">' +songs[i]+ '</a></li>' ));  //{ text: cities[i] }
 }
 $('.song-list').append(list);
 }
 
-$('.song-list').on('click', 'a[data-song]', function (event) {
+$('.liItem').on('click', 'a[data-song]', function (event) {
     if(!confirm('Are you sure ?')){
       return false;
     }
