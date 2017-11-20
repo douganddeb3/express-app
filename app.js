@@ -51,7 +51,7 @@ app.get('/songs1/:name', function(request, response){
 
 app.post('/songs', parseUrlencoded, function(request, response){
 	var data = request.body;
-	if(!data.name || !data.song){
+	if(!(data.name && data.song)){
 		response.sendStatus(400);
 		return false;
 	}
