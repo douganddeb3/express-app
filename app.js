@@ -17,7 +17,7 @@ if (process.env.REDISTOGO_URL) {
 } else {
    var client = redis.createClient(); 
 }
-client.flushdb();
+// client.flushdb();
 client.hset('songs', 'Doris Day', 'Sentimental Journey');
 client.hset('songs', 'Monkees', 'DayDream Believer');
 client.hset('songs', ' Carl Gustav Boberg', 'How Great Thou Art');
