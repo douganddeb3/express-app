@@ -10,7 +10,6 @@ $('.song-list').append(list);
 }
 
 $('.song-list').on('click', 'a[data-song]', function (event) {
-	event.preventDefault();
     if(!confirm('Are you sure ?')){
       return false;
     }
