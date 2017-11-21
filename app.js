@@ -51,12 +51,12 @@ app.get('/songs1/:name', function(request, response){
 
 app.post('/songs', parseUrlencoded, function(request, response){
 	var data = request.body;
-	if(!(data.name && data.song)){
+	if(!data.name || !data.song)){
 		response.sendStatus(400);
 		return false;
 	}
-	client.hset('songs', data.name, data.song);
-	var song3 = data.name;
+	client.hset('songs', data.song, data.name);
+	var song3 = data.song;
 	response.json(song3);	
 
 	//songs[data.name] = data.song;
