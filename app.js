@@ -56,7 +56,7 @@ app.post('/songs', parseUrlencoded, function(request, response){
 		return false;
 	}
 	client.hset('songs', data.name, data.song);
-	var song3 = data.song;
+	var song3 = data.name;
 	response.json(song3);	
 
 	//songs[data.name] = data.song;
