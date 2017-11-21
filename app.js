@@ -29,7 +29,7 @@ app.get('/', function(request, response){
 
 //var songs = {'Doris Day':'Sentimental Journey', 'Monkees': 'Daydream Believer', ' Carl Gustav Boberg': 'How Great Thou Art'};
 app.get('/songs', function(request, response){
-		client.hkeys('songs', function(error, names){
+		client.hvals('songs', function(error, names){
 		if(error) throw error;
 		response.json(names);	
 		});
