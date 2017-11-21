@@ -55,7 +55,7 @@ app.post('/songs', parseUrlencoded, function(request, response){
 		response.sendStatus(400);
 		return false;
 	}
-	client.hset('songs', data.name, data.song);
+	//client.hset('songs', data.name, data.song);
 	client.hset('songs', data.song, data.name);
 	var song3 = data.name;
 	response.json(song3);	
