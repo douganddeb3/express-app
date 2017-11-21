@@ -29,7 +29,7 @@ app.get('/', function(request, response){
 
 //var songs = {'Doris Day':'Sentimental Journey', 'Monkees': 'Daydream Believer', ' Carl Gustav Boberg': 'How Great Thou Art'};
 app.get('/songs', function(request, response){
-		client.hvals('songs', function(error, names){
+		client.hkeys('songs', function(error, names){
 		if(error) throw error;
 		response.json(names);	
 		});
@@ -56,7 +56,7 @@ app.post('/songs', parseUrlencoded, function(request, response){
 		return false;
 	}
 	client.hset('songs', data.name, data.song);
-	var song3 = data.song;
+	var song3 = data.name;
 	response.json(song3);	
 
 	//songs[data.name] = data.song;
