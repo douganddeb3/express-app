@@ -86,7 +86,7 @@ router.route('/:name')
 });
 */
 
-model.exports = router;
+module.exports = router;
 
 
 
