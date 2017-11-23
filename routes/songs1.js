@@ -21,8 +21,8 @@ if (process.env.REDISTOGO_URL) {
 var router1 = express.Router();
 
 
-	router1.route('/')
-	.get('/:name', function(request, response){
+	router1.route('/:name')
+	.get(function(request, response){
 	var name = request.params.name;
 	client.hget('songs', name, function(error, reply){
 		response.render('show.ejs',
