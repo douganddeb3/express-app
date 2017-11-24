@@ -23,7 +23,7 @@ var router = express.Router();
 
 client.flushdb();
 client.hset('songs', 'Sentimental Journey', 'Doris Day');
-client.hset('songs', 'DayDream Believer''Monkees');
+client.hset('songs', 'DayDream Believer','Monkees');
 client.hset('songs', 'How Great Thou Art',' Carl Gustav Boberg');
 
 /*app.get('/', function(request, response){
