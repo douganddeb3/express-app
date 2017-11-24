@@ -21,10 +21,10 @@ if (process.env.REDISTOGO_URL) {
 var router = express.Router();
 
 
-// client.flushdb();
-client.hset('songs', 'Doris Day', 'Sentimental Journey');
-client.hset('songs', 'Monkees', 'DayDream Believer');
-client.hset('songs', ' Carl Gustav Boberg', 'How Great Thou Art');
+client.flushdb();
+client.hset('songs', 'Sentimental Journey', 'Doris Day');
+client.hset('songs', 'DayDream Believer''Monkees');
+client.hset('songs', 'How Great Thou Art',' Carl Gustav Boberg');
 
 /*app.get('/', function(request, response){
 	response.send('OK');
