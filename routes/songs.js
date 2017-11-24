@@ -49,7 +49,7 @@ router.route('/')
 	//client.hset('songs', data.name, data.song);
 	//if(client.hget('songs', data.song))
 	client.hset('songs', data.song, data.name);
-	var song3 = data.name;
+	var song3 = data.song;
 	response.json(song3);	
 
 	//songs[data.name] = data.song;
